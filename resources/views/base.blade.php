@@ -11,7 +11,6 @@
 <body>
     @include('components.nav-link')
     @section('content')
-        
     @endsection
 </body>
 </html>
