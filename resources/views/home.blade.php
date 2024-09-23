@@ -2,5 +2,5 @@
     <x-slot:heading>
         Home Page
     </x-slot:heading>
-    <h1>{{ $greetings }} is home page<h1>
+    <h1>This is home page<h1>
 </x-layout>
