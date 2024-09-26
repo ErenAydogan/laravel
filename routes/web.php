@@ -1,10 +1,12 @@
 <?php
 
 use App\Http\Controllers\DatabaseController;
+use App\Models\Student;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function(){
-    return view('home');
+    $students = Student::select('name', 'email')->whereNotNull('email')->orderBy('name')->get();
+    dd($students);
 });
 
 
