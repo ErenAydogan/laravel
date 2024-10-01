@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\NotebookController;
+use App\Http\Controllers\NoteController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -18,3 +20,7 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
+
+
+Route::resource('notes', NoteController::class)->middleware('auth');
+Route::resource('notebooks', NotebookController::class)->middleware('auth');
