@@ -2,22 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Note;
+use App\Models\Notebook;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 
-class NoteController extends Controller
+class NotebookController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $user_id = Auth::id();
-        $notes = Note::where('user_id', $user_id)->latest('updated_at')->get();
-        $notes->each(function($note){
-            echo $note->title . '<br>';
-        });
+        //
     }
 
     /**
@@ -39,7 +34,7 @@ class NoteController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Note $note)
+    public function show(Notebook $notebook)
     {
         //
     }
@@ -47,7 +42,7 @@ class NoteController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Note $note)
+    public function edit(Notebook $notebook)
     {
         //
     }
@@ -55,7 +50,7 @@ class NoteController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Note $note)
+    public function update(Request $request, Notebook $notebook)
     {
         //
     }
@@ -63,7 +58,7 @@ class NoteController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Note $note)
+    public function destroy(Notebook $notebook)
     {
         //
     }
